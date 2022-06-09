@@ -20,6 +20,7 @@ const sidebar =
                     icon: "back-stage",
                     children: [
                         { text: "开发简介", link: "index/" , icon: "template"},
+                        { text: "第一步-导出", link: "export/" , icon: "editor"},
                     ]
                 }
             ]
