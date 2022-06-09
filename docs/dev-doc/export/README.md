@@ -29,14 +29,14 @@ const fooPlugin = (options) => {
 const barPlugin = (options) => {
   return (app) => {
     return {
-    name: 'vuepress-plugin-bar',
-    // ...
+      name: 'vuepress-plugin-bar',
+      // ...
     }
   }
 }
 ```
 
-**关于app实例，请根据你的实际业务自行决定是否传入**
+**关于App实例，请根据你的实际业务自行决定是否传入**
 
 像我这个搜索插件，用不到App实例，所以我们只需要创建一个`index.ts`
 
@@ -79,7 +79,7 @@ const nextSearchPlugin: (options: Options) => Plugin = (options) => {
     name: 'vuepress-plugin-next-search',
     clientConfigFile: path.resolve(__dirname, './client/core/clientConfig.ts'),
     define: {
-      __NEXT_SEARCH_OPTIONS__: nextSearchOptions,
+      NEXT_SEARCH_OPTIONS: nextSearchOptions,
     },
     onPrepared(app) {
       prepareSearchIndex({ app, nextSearchOptions })

@@ -1,6 +1,6 @@
-import type { PageFrontmatter} from '@vuepress/core'
-import type {Frontmatter, PageContent, PageIndex, VuepressPage, VuepressApp, Options} from './types'
-import {Parser} from 'htmlparser2'
+import type { PageFrontmatter } from '@vuepress/core'
+import type { Frontmatter, PageContent, PageIndex, VuepressPage, VuepressApp, Options } from './types'
+import { Parser } from 'htmlparser2'
 
 const HMR_CODE = `
 if (import.meta.webpackHot) {
@@ -19,7 +19,14 @@ if (import.meta.hot) {
 }
 `
 
-export async function prepareSearchIndex({ app , nextSearchOptions }: { app: VuepressApp,nextSearchOptions: Options }): Promise<string> {
+// eslint-disable-next-line require-jsdoc
+export async function prepareSearchIndex({
+  app,
+  nextSearchOptions,
+}: {
+  app: VuepressApp
+  nextSearchOptions: Options
+}): Promise<string> {
   const searchIndex: PageIndex[] = []
   for (const page of app.pages) {
     searchIndex.push({
@@ -27,7 +34,7 @@ export async function prepareSearchIndex({ app , nextSearchOptions }: { app: Vue
       title: page.title,
       pathLocale: page.pathLocale,
       frontmatter: extractPageFrontmatter(page.frontmatter),
-      contents: extractPageContents(page,nextSearchOptions),
+      contents: extractPageContents(page, nextSearchOptions),
     })
   }
 
@@ -45,14 +52,16 @@ export const UPD_NAME = 'update-vuepress-plugin-next-search-index'
   return app.writeTemp('internal/vuepress-plugin-next-search-index.js', content)
 }
 
+// eslint-disable-next-line require-jsdoc
 function extractPageFrontmatter(frontmatter: PageFrontmatter): Frontmatter {
   return {
-    category: typeof frontmatter.category === "undefined" ? [] : frontmatter.category as string[],
-    tag: typeof frontmatter.tag === "undefined" ? [] : frontmatter.tag as string[],
+    category: typeof frontmatter.category === 'undefined' ? [] : (frontmatter.category as string[]),
+    tag: typeof frontmatter.tag === 'undefined' ? [] : (frontmatter.tag as string[]),
   }
 }
 
-function extractPageContents(page: VuepressPage,nextSearchOptions:Options): PageContent[] {
+// eslint-disable-next-line require-jsdoc
+function extractPageContents(page: VuepressPage, nextSearchOptions: Options): PageContent[] {
   const results: PageContent[] = []
 
   const slugs = new Map<string, string>()

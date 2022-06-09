@@ -72,26 +72,31 @@
         return navCount + repo <= 2
       })
 
+      // eslint-disable-next-line require-jsdoc
       function onUp() {
         if (activeSuggestion.value) {
           focusIndex.value > 0 ? focusIndex.value-- : suggestions.value.length - 1
         }
       }
 
+      // eslint-disable-next-line require-jsdoc
       function onDown() {
         if (activeSuggestion.value) {
           focusIndex.value < suggestions.value.length - 1 ? focusIndex.value++ : 0
         }
       }
 
+      // eslint-disable-next-line require-jsdoc
       function focus(i: number) {
         focusIndex.value = i
       }
 
+      // eslint-disable-next-line require-jsdoc
       function unfocus() {
         focusIndex.value = -1
       }
 
+      // eslint-disable-next-line require-jsdoc
       function go(i: number) {
         if (!activeSuggestion.value) return
         const suggest = suggestions.value[i]

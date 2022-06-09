@@ -5,5 +5,3 @@ declare module '*.vue' {
   // @ts-ignore
   export default nextSearch
 }
-
-

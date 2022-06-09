@@ -1,5 +1,5 @@
 import type { Ref } from 'vue'
-import type {App, Page} from '@vuepress/core'
+import type { App, Page } from '@vuepress/core'
 
 type PageIndex = {
   title: Page['title']
@@ -51,4 +51,15 @@ type VuepressPage = Pick<Page, 'pathLocale' | 'title' | 'path' | 'headers' | 'co
 
 declare const __NEXT_SEARCH_OPTIONS__: Options
 
-export { PageIndex, PageContent, Word, Suggestion, SearchIndex, SearchIndexRef, Options, Frontmatter, VuepressApp,VuepressPage }
+export {
+  PageIndex,
+  PageContent,
+  Word,
+  Suggestion,
+  SearchIndex,
+  SearchIndexRef,
+  Options,
+  Frontmatter,
+  VuepressApp,
+  VuepressPage,
+}

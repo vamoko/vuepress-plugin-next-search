@@ -30,7 +30,8 @@ if (
   }
 }
 
-export function useSuggestions(query: Ref<string>,options: Options): Ref<Suggestion[]> {
+// eslint-disable-next-line require-jsdoc
+export function useSuggestions(query: Ref<string>, options: Options): Ref<Suggestion[]> {
   const suggestions = ref([] as Suggestion[])
   let id: NodeJS.Timeout | null = null
   watch(query, () => {
@@ -41,6 +42,7 @@ export function useSuggestions(query: Ref<string>,options: Options): Ref<Suggest
   })
   return suggestions
 
+  // eslint-disable-next-line require-jsdoc
   function search() {
     const queryStr = query.value.toLowerCase().trim()
     if (!queryStr) {
@@ -50,7 +52,7 @@ export function useSuggestions(query: Ref<string>,options: Options): Ref<Suggest
     const suggestionResults = new Map<string, Suggestion[]>()
     const suggestionSubTitles = new Set<string>()
     for (const page of searchIndex.value) {
-      for (const suggest of extractSuggestions(page, queryStr ,options)) {
+      for (const suggest of extractSuggestions(page, queryStr, options)) {
         suggestionSubTitles.add(suggest.parentPageTitle)
         let list = suggestionResults.get(suggest.parentPageTitle)
         if (!list) {
@@ -75,14 +77,15 @@ export function useSuggestions(query: Ref<string>,options: Options): Ref<Suggest
   }
 }
 
-function* extractSuggestions(page: PageIndex, queryStr: string ,options: Options): Iterable<Suggestion> {
+// eslint-disable-next-line require-jsdoc
+function* extractSuggestions(page: PageIndex, queryStr: string, options: Options): Iterable<Suggestion> {
   let frontmatter = ''
-  if (page.frontmatter?.tag?.length){
-    frontmatter += options.frontmatter?.tag + " : " + page.frontmatter?.tag.join("|")
+  if (page.frontmatter?.tag?.length) {
+    frontmatter += options.frontmatter?.tag + ' : ' + page.frontmatter?.tag.join('|')
   }
-  if (page.frontmatter?.category?.length){
+  if (page.frontmatter?.category?.length) {
     // @ts-ignore
-    frontmatter += ' & ' + options.frontmatter?.category + " : " + page.frontmatter?.category.join("|")
+    frontmatter += ' & ' + options.frontmatter?.category + ' : ' + page.frontmatter?.category.join('|')
     //console.log(frontmatter);
   }
 
@@ -138,7 +141,7 @@ function* extractSuggestions(page: PageIndex, queryStr: string ,options: Options
         display: [
           {
             type: 'header',
-            str: content.header.trim() ? `${content.header}\n` : ''
+            str: content.header.trim() ? `${content.header}\n` : '',
           },
           ...matchContent,
         ],
@@ -151,6 +154,7 @@ function* extractSuggestions(page: PageIndex, queryStr: string ,options: Options
   }
 }
 
+// eslint-disable-next-line require-jsdoc
 function getParentPageTitle(page: PageIndex): string {
   const pathParts = page.path.split('/')
   let parentPagePath = '/'
@@ -160,6 +164,7 @@ function getParentPageTitle(page: PageIndex): string {
   return parentPage.title
 }
 
+// eslint-disable-next-line require-jsdoc
 function buildMatch(text: string, queryStr: string): Word[] | null {
   const result: Word[] = []
   let totalLength = 0
@@ -183,6 +188,7 @@ function buildMatch(text: string, queryStr: string): Word[] | null {
 
   return result.filter((w) => w.str)
 
+  // eslint-disable-next-line require-jsdoc
   function append(s: string, type: 'normal' | 'highlight') {
     let str = s
 
