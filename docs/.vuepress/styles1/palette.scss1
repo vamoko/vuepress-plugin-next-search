@@ -1,0 +1,7 @@
+$search-bg-color: red;
+$search-accent-color: red;
+$search-accent-text-color: red;
+$search-text-color: red;
+$search-border-color: red;
+$search-item-text-color: red;
+$search-item-focus-bg-color: red;
