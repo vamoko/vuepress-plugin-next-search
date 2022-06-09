@@ -1,12 +1,12 @@
 {
   "name": "vuepress-plugin-next-search",
   "description": "适配vuepressV2的全文搜索(full-text-search)的插件",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "files": [
-    "lib"
+    "src"
   ],
-  "main": "./lib/index.ts",
+  "main": "./src/index.ts",
   "author": "holajacky@126.com",
   "homepage": "https://github.com/holajacky/vuepress-plugin-next-search",
   "scripts": {
