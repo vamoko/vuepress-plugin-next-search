@@ -46,6 +46,9 @@ npm i -D vuepress-plugin-next-search
 - 正文 / content
 - 标签和分类（如果frontmatter内有的话）/tag&category
 
+如果关掉了这个，插件只是不会再正文内进行搜索，但是还是会在标题和frontmatter内进行搜索的\
+If false is selected,Just don't search in the content
+
 举个栗子/e.g.
 ```md
 ---
