@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-search-sandbox",
-  "description": "帮助文档",
+  "description": "适配vuepressV2的全文搜索工具",
   "version": "0.0.1",
   "license": "MIT",
   "files": [

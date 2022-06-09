@@ -4,7 +4,7 @@ icon: home
 home: true
 heroImage: /images/home.gif
 heroText: vuepress-plugin-next-search
-tagline: 适配vuepress2的全文搜索工具
+tagline: 适配vuepressV2的全文搜索工具
 actions:
 - text: 快速上手
   link: /guide/index/
@@ -38,11 +38,9 @@ footer: MIT Licensed | Copyright © holajacky@126.com
 
 :::: danger 白嫖怪发起了求助
 - 有木有大佬可以帮忙做一下**logo**，无偿用爱发电那种，对，我明目张胆的白嫖
-- 前端大佬想业余时间挣钱的，我有项目，可以一起合作，前提你必须是：==前端&技术中上==
 
-什么？你说程序员根本没业余时间？\
-**你可能不是一个合格的程序员**
+**如果你不会摸鱼，你可能不是一个合格的程序员**
 ::: right
-摘自 [《如何用8小时完成4小时的工作》](https://baike.baidu.com/item/%E6%91%B8%E9%B1%BC/57233771)
+------摘自 [《如何用8小时完成4小时的工作》](https://baike.baidu.com/item/%E6%91%B8%E9%B1%BC/57233771)
 :::
 ::::

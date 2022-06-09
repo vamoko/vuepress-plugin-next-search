@@ -1,6 +1,6 @@
 ---
-title: 开发文档
-date: 2022-04-26
+title: 开发简介
+date: 2022-06-09
 icon: template
 category:
 - 开发文档
@@ -15,18 +15,23 @@ tag:
 ::::
 
 <!-- more -->
-# **介绍**
 
-## vuepress
+## 前言
 
-### 框架
+阅览之前，默认你已经掌握了`typescript`、`vue3`，如果你并不了解相关内容，建议您先去了解一下，然后再回头来读这个
 
-使用开源项目vuepress制作，相关链接如下
-
-* [vuepress官网](https://vuepress.vuejs.org/)
-* [vuepress中文站](https://vuepress.vuejs.org/zh/)
-* [vuepress开源地址](https://github.com/vuejs/vuepress)
-
-::: warning 注意
-文档使用vuepress2制作，目前处于Beta版本
+::: warning
+只要没特殊说明，那么语言就是`typescript`\
+由于内容较多，我只能一点一点的写，来不及等文档更新的小伙伴，可以自己看源码学习
+我写这个的目的只是因为vuepressV2的插件目前还很少，相信很多大佬都想做但是不知道从哪入手，就有我这个萌新来抛砖引玉吧
 :::
+
+## 准备
+
+### 开发工具
+
+随意，你开心就好
+
+### 环境
+
+`Node.js14+`
