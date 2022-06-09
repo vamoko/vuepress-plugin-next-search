@@ -25,7 +25,7 @@ const theme = hopeTheme({
     right: ["Search","Links","Language","Repo","Outlook"],
   },
   editLink: true,
-  editLinkPattern: ":repo/-/tree/:branch/docs/:path",
+  editLinkPattern: ":repo/blob/:branch/docs/:path",
   lastUpdated: true,
   contributors: false,
   blog: {
