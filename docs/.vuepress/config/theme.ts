@@ -51,7 +51,15 @@ const theme = hopeTheme({
         mark: true,
         imageSize: true,
     },
-  }
+  },
+  locales: {
+    '/': {
+      lang: 'zh-CN',
+    },
+    "/en/": {
+      lang: "en-US",
+    },
+  },
 })
 
 export { theme }

@@ -16,6 +16,9 @@ export default defineUserConfig({
   locales: {
     '/': {
       lang: 'zh-CN',
-    }
+    },
+    "/en/": {
+      lang: "en-US",
+    },
   },
 })
