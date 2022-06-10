@@ -5,6 +5,10 @@
 
 [vuepress v2]: https://v2.vuepress.vuejs.org/
 
+![Version](https://img.shields.io/npm/v/vuepress-plugin-next-search.svg?style=flat-square&logo=npm)
+![Downloads](https://img.shields.io/npm/dm/vuepress-plugin-next-search.svg?style=flat-square&logo=npm)
+![Total downloads](https://img.shields.io/npm/dt/vuepress-plugin-next-search?style=flat-square&logo=npm)
+
 **三个源码都看了，没错，咱就是……缝合怪，感谢以下三位作者**\
 [leo-buneev/vuepress-plugin-fulltext-search](https://github.com/leo-buneev/vuepress-plugin-fulltext-search)\
 [z3by/vuepress-plugin-flexsearch](https://github.com/z3by/vuepress-plugin-flexsearch)\
@@ -38,17 +42,18 @@ npm i -D vuepress-plugin-next-search
 ## 配置/Config
 
 ### fullText
-类型 / type：boolean\
-默认值 / default: true\
+类型 / `type：boolean`\
+默认值 / `default: true`\
 是否开启文章正文搜索/Whether to enable article body search\
 默认搜索范围/default search scope：
-- 标题 / title
-- 正文 / content
-- 标签和分类（如果frontmatter内有的话）/tag&category
+- 标题 / `title`
+- 正文 / `content`
+- 标签和分类（如果`frontmatter`内有的话）/`tag`&`category`
 
 如果关掉了这个，插件只是不会再正文内进行搜索，但是还是会在标题和frontmatter内进行搜索的\
 If false is selected,Just don't search in the content
 
+如果你想通过`tag`或者`category`搜索的话，你需要在每个.md的`frontmatter`内这样写
 举个栗子/e.g.
 ```md
 ---
@@ -66,8 +71,8 @@ tag:
 
 ### placeholder
 
-类型 / type：string\
-默认值 / default: '搜索'\
+类型 / `type：string`\
+默认值 / `default: '搜索'`\
 你懂得，不多BB/YOU KNOW,NO BB
 
 ### frontmatter
@@ -76,13 +81,13 @@ tag:
 
 #### tag
 
-类型 / type：string\
-默认值 / default: '标签'
+类型 / `type：string`\
+默认值 / `default: '标签'`
 
 #### category
 
-类型 / type：string\
-默认值 / default: '分类'
+类型 / `type：string`\
+默认值 / `default: '分类'`
 
 ## 用法/Usage
 
