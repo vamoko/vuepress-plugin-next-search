@@ -19,7 +19,7 @@
 
 ## [在线文档 / Online Docs](http://vuepress-plugin-next-search.holajacky.com)
 
-备案中，懂的都懂
+备案中，懂的都懂（。。。温馨提示：管局审核时间约为7天。。。）
 
 **推荐使用在线文档查看如何使用**\
 **Recommend using online documentation to see how to use**

@@ -22,7 +22,8 @@
     "vuepress-plugin",
     "full-text-search",
     "next-search",
-    "vuepress-next"
+    "vuepress-next",
+    "vuepress-plugin-next-search"
   ],
   "devDependencies": {
     "vuepress": "^2.0.0-beta.46",
