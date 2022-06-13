@@ -39,6 +39,39 @@ There is no need to translate the above sentence
 npm i -D vuepress-plugin-next-search
 ```
 
+## 用法/Usage
+
+```js
+const { nextSearchPlugin } = require('vuepress-plugin-next-search')
+```
+
+```js
+import { nextSearchPlugin } from 'vuepress-plugin-next-search'
+```
+
+例如 / e.g.  `.vuepress/config.ts`
+
+```js
+  plugins: [
+    nextSearchPlugin({
+      fullText: true,
+      placeholder: '搜索',
+      frontmatter: {
+        tag: '标签',
+        category: '分类',
+      }
+    }),
+  ]
+```
+
+或者这样
+
+```js
+  plugins: [
+    nextSearchPlugin({}),
+  ]
+```
+
 ## 配置/Config
 
 ### fullText
@@ -88,36 +121,3 @@ tag:
 
 类型 / `type：string`\
 默认值 / `default: '分类'`
-
-## 用法/Usage
-
-```js
-const { nextSearchPlugin } = require('vuepress-plugin-next-search')
-```
-
-```js
-import { nextSearchPlugin } from 'vuepress-plugin-next-search'
-```
-
-例如 / e.g.  `.vuepress/config.ts`
-
-```js
-  plugins: [
-    nextSearchPlugin({
-      fullText: true,
-      placeholder: '搜索',
-      frontmatter: {
-        tag: '标签',
-        category: '分类',
-      }
-    }),
-  ]
-```
-
-或者这样
-
-```js
-  plugins: [
-    nextSearchPlugin({}),
-  ]
-```
